@@ -1726,7 +1726,10 @@ body {
     font-weight: 700;
     border: 2px solid #2B1B9A;
     background-color: #ffff;
-    /* max-width: 300px; */
+    /* width: fit-content; */
+    /* width: 300px; */
+    /* min-width: 100px; */
+    /* max-width: 400px; */
 }
 /* ----------------------end pricing table */
 
@@ -1789,7 +1792,7 @@ body {
     display: none; 
 }
 .btn-latest > p{
-    position: absolute;
+    /* position: absolute; */
     width: 70px;
     height: 70px;
     background: #fff;
@@ -1856,7 +1859,7 @@ body {
 .form-latest-news{
     display: flex;
     justify-content: center;
-    position: relative;
+    /* position: relative; */
 }
 .form-latest-news > div{
     /* border: 2px solid red; */
@@ -1874,11 +1877,15 @@ body {
 }
 .form-latest-news > div > form{
     position: relative;
+    /* border: 1px solid red; */
+    width: 100%;
+    /* max-width: 1000px; */
 }
 .form-latest-news > div > form > input{
     position: relative;
+    z-index: 9;
     width: 100%;
-    max-width: 925px;
+    /* max-width: 925px; */
     padding: 25px;
     border-radius: 4px;
     border: 1px solid #438FF9;
@@ -1886,9 +1893,10 @@ body {
     
 }
 .form-latest-news > div > form > button{
-    transform: translate(50% 50%);
+    /* transform: translate(50% , 50%); */
     position: absolute;
-    right: 8%;
+    z-index: 9999999;
+    right: 8px;
     top: 8%;
     /* position: relative; */
     /* margin-left: 72%; */
@@ -1909,28 +1917,79 @@ body {
 
 /* -------------------------start footer1 */
 footer{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
     align-items: center;
-    padding: 70px 10px;
+    padding: 80px 10px;
+    color: #2b2b2bf1;
 }
 .about-us-footer{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+    width: 100%;
 }
-.Usefull-links{
-    border: 1px solid yellow;
+.about-us-footer > p{
+    /* border: 1px solid blue; */
+    margin: 15px 0;
+    line-height: 23px;
+    font-size: 16px;
+    
+}
+.envelope-phone{
+    display: flex;
+    flex-direction: column;
+}
+.envelope-phone > div{
+    /* border: 1px solid red; */
+    display: flex;
+    margin-bottom: 10px;
+}
+.envelope-phone > div > i{
+    color: #3bbeffc5;
+}
+.envelope-phone > div >p{
+    margin-left: 10px;
+}
+.icons-social-media{
+    margin: 20px 0;
+}
+.icons-social-media > i{
+    border: 1px solid #2B1B9A;
+    border-radius: 50px;
+    padding: 5px;
+    color: #131313;
+}
+.icons-social-media > i:nth-of-type(1){
+    padding:5px 8px;
+}
+.usefull-links{
+    /* border: 1px solid yellow; */
     width: 100%;
 }
 .services{
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     width: 100%;
 }
 .help{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 100%;
+}
+.usefull-links > h3,
+.services > h3,
+.help > h3{
+    margin: 18px 0 20px 0;
+}
+.usefull-links > nav > ul > li,
+.services > nav > ul > li,
+.help > nav > ul > li{
+    margin-bottom: 15px;
+}
+.icon-footer-menu{
+    color: #714ca1b2;
+    padding-right: 5px;
 }
 /* ---------------------------end footer1 */
 
@@ -2083,6 +2142,19 @@ footer{
     .img-latest-news2{
         max-width: 350px;
         margin: 15px;
+    }
+    /* footer 1 */
+    footer{
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: center;
+    }
+    .about-us-footer,
+    .usefull-links,
+    .services,
+    .help{
+        width: 40%;
+        margin-left: 70px;
     }
 }
 
@@ -2247,8 +2319,9 @@ footer{
         display: block;
     }
     .btn-pricing-table{
-        /* width: 300px; */
-        max-width: 300px;
+        border: 1px solid red;
+        width: 300px;
+        
     }
     /* latest news */
     .latest-news{
@@ -2272,6 +2345,26 @@ footer{
     }
     .btn-latest{
         display: block;
+    }
+    /* footer1 */
+    .envelope-phone{
+        flex-direction: row;
+        /* border: 1px solid red; */
+    }
+    .envelope-phone > div:nth-of-type(2){
+        /* border: 1px solid red; */
+        margin-left: 15px;
+    }
+    .about-us-footer{
+        width: 34%;
+        margin: 0;
+    }
+    .usefull-links,
+    .services,
+    .help{
+        width: 13%;
+        margin: 0;
+        margin-left:50px ;
     }
 }
 
