@@ -1759,9 +1759,11 @@ body {
 
 /* ----------------------start latest news */
 .latest-news{
+    background: transparent linear-gradient(92deg, #A2D2F4 0%, #DFDDFF 100%) 0% 0% no-repeat padding-box;
+}
+.parent-title-text-img-latest{
     /* border: 1px solid red; */
     padding: 95px 10px;
-    background: transparent linear-gradient(92deg, #A2D2F4 0%, #DFDDFF 100%) 0% 0% no-repeat padding-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1790,9 +1792,19 @@ body {
 }
 .btn-latest{
     display: none; 
+    border: 1px solid red;
+    transform: translate(50% , 50%);
+    /* margin-top: -200px; */
+    /* margin-left: 150px; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    width: 300px;
 }
 .btn-latest > p{
     /* position: absolute; */
+    /* transform: translate(50% , 50%); */
+    /* margin-top: -200px; */
+    /* margin-left: 150px; */
     width: 70px;
     height: 70px;
     background: #fff;
@@ -1805,9 +1817,12 @@ body {
 }
 .btn-latest > p:nth-of-type(1){
     transform: rotate(180deg);
+    margin-left: 100px;
+    margin-bottom: 100px;
+    
 }
 .btn-latest > p:nth-of-type(2){
-    margin-left: 80px;
+    border: 2px solid red;
 }
 /* ----------start parent-img-latest-news */
 .parent-img-latest-news{
@@ -1993,7 +2008,50 @@ footer{
 }
 /* ---------------------------end footer1 */
 
-
+/* -------------------------start footer2 */
+.footer2{
+    /* border: 1px solid red; */
+    padding: 0 30px;
+}
+.parent-footer2{
+    border-top: 1px solid #DBDBDB;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+    text-align: center;
+    color: #1f1f1f;
+}
+.parent-footer2 > p{
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+}
+.parent-footer2 > p > span{
+    font-weight: 700;
+    color: #242424;
+}
+.parent-footer2 > figure > img{
+    max-width: 147px;
+}
+.parent-footer2 > figure,
+.parent-footer2 > div{
+    display: none;
+}
+.parent-footer2 > div{
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    justify-content: center;
+    align-items: center;
+}
+.parent-footer2 > div > span{
+    color: rgb(167, 167, 167);
+    font-size: 22px;
+    font-weight: 500;
+}
+/* ---------------------------end footer2 */
 
 
 .header-site{
@@ -2064,6 +2122,18 @@ footer{
     /* latest news */
     .form-latest-news > div{
         display: block;
+    }
+    /* footer2 */
+    .parent-footer2{
+        justify-content: space-between;
+        padding: 20px 70px;
+    }
+    .parent-footer2 > p{
+        font-size: 16px;
+        width: 50%;
+    }
+    .parent-footer2 > figure{
+        display: flex;
     }
 }
 
@@ -2319,12 +2389,12 @@ footer{
         display: block;
     }
     .btn-pricing-table{
-        border: 1px solid red;
+        /* border: 1px solid red; */
         width: 300px;
         
     }
     /* latest news */
-    .latest-news{
+    .parent-title-text-img-latest{
         flex-direction: row;
         justify-content: baseline;
         padding: 50px 100px;
@@ -2365,6 +2435,14 @@ footer{
         width: 13%;
         margin: 0;
         margin-left:50px ;
+    }
+
+    /* footer2 */
+    .parent-footer2 > div{
+        display: flex;
+    }
+    .parent-footer2 > div{
+        display: flex;
     }
 }
 
