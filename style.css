@@ -76,9 +76,30 @@ body {
     justify-content: center;
     width: fit-content;
     padding-left: 15px;
+    position: relative;
+}
+.site-menu > nav > ul > li:nth-of-type(1):before,
+.site-menu > nav > ul > li:nth-of-type(2):before,
+.site-menu > nav > ul > li:nth-of-type(3):before,
+.site-menu > nav > ul > li:nth-of-type(4):before{
+    content: '';
+    left: 15px;
+    bottom: -3px;
+    position: absolute;
+    background-color: #438ff9;
+    height: 2px;
+    width: 0;
+    transition: all 0.3s;
+}
+.site-menu > nav > ul > li:nth-of-type(1):hover:before,
+.site-menu > nav > ul > li:nth-of-type(2):hover::before,
+.site-menu > nav > ul > li:nth-of-type(3):hover::before,
+.site-menu > nav > ul > li:nth-of-type(4):hover::before{
+    content: '';
+    width: 90px;
 }
 .site-menu > nav > ul > li > a{
-    text-transform: capitalize;
+    /* border: 1px solid red; */
     color: #131313;
     font-weight: 600;
     display: block;
@@ -99,12 +120,15 @@ body {
     border-radius: 50px;
     padding: 14px 25px !important;
     margin-top: 30px;
-    color: #ffffff !important;
-    text-transform: capitalize;
+    color: #ffff !important;
     box-shadow: 0px 6px 15px #438ff973;
-    transition: all 0.5s ease-out 0s;
+    transition: all 0.5s;
     font-weight: 300;
     font-size: 15px;
+}
+.sign-up:hover{
+    background-color: #fff ;
+    color: #438FF9 !important;
 }
 .currency{
     /* border: 1px solid red; */
@@ -197,9 +221,14 @@ body {
     color: #ffffff;
     font-weight: 600;
     font-size: 16px;
+    
 }
 .icon-make-budget{
     margin-left: 10px;
+    transition: all 0.5s;
+}
+.parent-two-btn > button:hover .icon-make-budget{
+    transform: translateX(8px);
 }
 .parent-two-btn > button:nth-of-type(2){
         padding: 12px 35px;
@@ -485,7 +514,11 @@ body {
     border: 2px solid #2B1B9A;
 }
 .icon-about-us{
-    padding-left: 20px;
+    padding-left: 10px;
+    transition: all 0.5s;
+}
+.about-us > button:hover .icon-about-us{
+    transform: translateX(8px);
 }
 /* -----------------------end about us */
 
